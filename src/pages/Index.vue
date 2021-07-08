@@ -96,6 +96,7 @@ export default {
   metaInfo: {
     title: "Hello, world!",
   },
+  name: 'Homepage',
 };
 </script>
 
