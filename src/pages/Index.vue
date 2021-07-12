@@ -39,14 +39,10 @@
                 &nbsp;
               </span>
             </p>
+            <hr />
           </div>
-          <hr />
           <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#"
-              >Older Posts &rarr;</a
-            >
-          </div>
+          <Pager :info="$page.posts.pageInfo"/>
         </div>
       </div>
     </div>
@@ -54,8 +50,12 @@
 </template>
 
 <page-query>
-query {
-	posts: allStrapiPost {
+query ($page: Int) {
+	posts: allStrapiPost (perPage: 2, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id
@@ -72,11 +72,16 @@ query {
 </page-query>
 
 <script>
+import { Pager } from 'gridsome'
+
 export default {
   metaInfo: {
     title: "Hello, world!",
   },
   name: 'Homepage',
+    components: {
+    Pager
+  },
 };
 </script>
 
