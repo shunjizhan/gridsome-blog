@@ -21,6 +21,7 @@ module.exports = {
         queryLimit: 1000, // Defaults to 100
         contentTypes: ['post', 'tag'],
         typename: 'Strapi',
+        singleTypes: ['general'],
         // singleTypes: ['impressum'],
         // Possibility to login with a Strapi user,
         // when content types are not publicly available (optional).
