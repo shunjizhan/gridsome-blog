@@ -51,7 +51,7 @@
 
 <page-query>
 query ($page: Int) {
-	posts: allStrapiPost (perPage: 2, page: $page) @paginate {
+	posts: allStrapiPost (perPage: 3, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
