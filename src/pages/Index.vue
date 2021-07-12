@@ -30,7 +30,7 @@
             </g-link>
             <p class="post-meta">
               Posted by
-              <a href="#">author name</a>
+              <a href="#">Shunji Zhan</a>
                {{ edge.node.created_at }}
             </p>
             <p>
