@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <!-- Page Header -->
-    <header class="masthead" :style="{ backgroundImage: `url(http://localhost:1337${general.cover[0].url})` }">
+    <header class="masthead" :style="{ backgroundImage: `url(${GRIDSOME_API_URL}${general.cover[0].url})` }">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
