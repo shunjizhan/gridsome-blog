@@ -1,6 +1,16 @@
 # Gridsome Blog
 This is a **static** blog app that is **SSR** rendered, powered by `Vue`, `grindsome` and `Strapi`, for learning purpose.
 
+## Info
+### 什么是 Jamstack
+Gridsome是一个Jamstack框架。 Jamstack使您可以通过预渲染文件并直接从CDN直接提供文件来构建快速安全的站点和应用程序，而无需管理或运行Web服务器。
+### 它是如何工作的
+Gridsome生成静态HTML，一旦加载到浏览器中，该HTML就会渗入Vue SPA。这意味着您可以使用Gridsome构建静态网站和动态应用程序。
+
+Gridsome为每个页面构建一个.html文件和一个.json文件。加载第一页后，它仅使用.json文件来预取和加载下一页的数据。它还为需要它的每个页面构建一个.js包（代码拆分）。
+
+它使用vue-router进行SPA路由，并使用vue-meta来管理。
+
 ## Implementation
 see more details in [commits](https://github.com/shunjizhan/gridsome-blog/commits/main)
 
